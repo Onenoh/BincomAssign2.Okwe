@@ -1,0 +1,55 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    @* <title>@ViewData["Title"] - BincomAssign2.Okwe</title> *@
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+   @*  <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" /> *@
+    <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+    @* <link rel="stylesheet" href="~/BincomAssign2.Okwe.styles.css" asp-append-version="true" /> *@
+</head>
+<body>
+    <div class="hero">
+        <nav>
+            <h2 class="logo">Portfo<span id="lio">lio</span></h2>
+            <ul>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="About">About Me</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Services">Services</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Skills">Skills</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Contact">Contact Me</a>
+                </li>
+                <li>
+                    <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+                </li>
+            </ul>
+            <a class="btn">Subscribe</a>
+        </nav>
+    </div>
+    <div>
+        <main>
+            @RenderBody()
+        </main>
+    </div>
+
+   @*  <footer class="border-top footer text-muted">
+        <div class="container">
+            &copy; 2024 - BincomAssign2.Okwe - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+        </div>
+    </footer> *@
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>
