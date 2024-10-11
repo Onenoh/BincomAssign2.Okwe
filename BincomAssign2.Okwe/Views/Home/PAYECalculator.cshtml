@@ -1,0 +1,51 @@
+﻿@model BincomAssign2.Okwe.Models.PAYE
+
+@{
+    ViewData["Title"] = "Tax Calculator";
+}
+@* <link rel="stylesheet" href="~/css/home.css" asp-append-version="true" /> *@
+
+<nav>
+    <ul>
+        <li>
+            <a asp-area="" asp-controller="Home" asp-action="Index">Home</a>
+        </li>
+        <li>
+            <a asp-area="" asp-controller="Home" asp-action="About">About Me</a>
+        </li>
+        <li>
+            <a asp-area="" asp-controller="Home" asp-action="Services">Services</a>
+        </li>
+        <li>
+            <a asp-area="" asp-controller="Home" asp-action="Skills">Skills</a>
+        </li>
+        <li>
+            <a asp-area="" asp-controller="Home" asp-action="Contact">Contact Me</a>
+        </li>
+        <li>
+            <a asp-area="" asp-controller="Home" asp-action="PAYECalculator">Tax Calculator</a>
+        </li>
+    </ul>
+    <a class="btn">Subscribe</a>
+</nav>
+<div class="text-center">
+    <h1 class="display-4">Calculate PAYE</h1>
+</div>
+
+<div class="container-fluid">
+    <form asp-action="Calculate" method="post">
+        <div class="form-group">
+            <label class="styled-label">Annual Income</label>
+            <input class="form-control custom-input" type="number" asp-for="Income" placeholder="0" />
+            <span asp-validation-for="Income" class="text-danger"></span>
+        </div>
+
+        <button class="btn custom-button" type="submit">Calculate</button>
+
+        <div class="form-group">
+            <label class="styled-label">PAYE Tax</label>
+            <span class="form-control custom-span">@ViewBag.CalculatedTax</span>
+        </div>
+    </form>
+</div>
+

@@ -1,3 +1,5 @@
+using BincomAssign2.Okwe.Implementation;
+
 namespace BincomAssign2.Okwe
 {
     public class Program
@@ -8,6 +10,7 @@ namespace BincomAssign2.Okwe
 
             // Add services to the container.
             builder.Services.AddControllersWithViews();
+            builder.Services.AddScoped<Calculator>();
 
             var app = builder.Build();
 
