@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Upload";
+}
+
+<link rel="stylesheet" href="~/css/photo.css" asp-append-version="true" />
+<link rel="stylesheet" href="~/css/home.css" asp-append-version="true" />
+
+
+@using (Html.BeginForm("Upload", "Home", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <div class="container-fluid">
+    <div>
+        <label>Title:</label>
+        <input type="text" name="title" required />
+    </div>
+    <div>
+        <label>Description:</label>
+        <textarea name="description"></textarea>
+    </div>
+    <div>
+        <label>Select Photo:</label>
+        <input type="file" name="file" required />
+    </div>
+    <div>
+        <input type="submit" value="Upload Photo"  />
+    </div>
+    </div>
+}

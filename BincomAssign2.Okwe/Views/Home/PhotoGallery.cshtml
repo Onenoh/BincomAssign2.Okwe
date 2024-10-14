@@ -1,0 +1,31 @@
+﻿@model X.PagedList.IPagedList<BincomAssign2.Okwe.Models.Photo>
+@using X.PagedList.Mvc.Core
+@{
+    ViewData["Title"] = "Photo Gallery";
+}
+
+<link rel="stylesheet" href="~/css/photo.css" asp-append-version="true" />
+
+<div class="container-fluid">
+<h2>Photo Gallery</h2>
+<a href="@Url.Action("Upload")" class="link">Upload Photo</a>
+
+<div class="gallery">
+    @foreach (var photo in Model)
+    {
+        <div class="photo-item">
+            <h3>@photo.Title</h3>
+            <img src="@Url.Action("GetImage", "Home", new { id = photo.Id })" alt="@photo.Title" width="150" />
+            <p>@photo.Description</p>
+            <a href="@Url.Action("Details", new { id = photo.Id })" class="link">View Details</a> |
+            <a href="@Url.Action("Delete", new { id = photo.Id })" class="btn btn-danger">Delete</a>
+        </div>
+    }
+</div>
+
+<!-- Pagination Controls -->
+<div class="pagination-container">
+    @Html.PagedListPager(Model, page => Url.Action("PhotoGallery", new { page }))
+</div>
+</div>
+

@@ -1,4 +1,6 @@
+using BincomAssign2.Okwe.Data;
 using BincomAssign2.Okwe.Implementation;
+using Microsoft.EntityFrameworkCore;
 
 namespace BincomAssign2.Okwe
 {
@@ -11,6 +13,8 @@ namespace BincomAssign2.Okwe
             // Add services to the container.
             builder.Services.AddControllersWithViews();
             builder.Services.AddScoped<Calculator>();
+            builder.Services.AddDbContext<ApplicationDbContext>(options =>
+            options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
             var app = builder.Build();
 

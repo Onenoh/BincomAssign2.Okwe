@@ -1,0 +1,122 @@
+﻿.gallery {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.photo-item {
+    margin: 10px;
+}
+
+    .photo-item img {
+        border: 1px solid #ccc;
+        border-radius: 5px;
+    }
+
+
+.form-group {
+    margin-bottom: 15px; 
+}
+
+
+label {
+    display: block; 
+    font-weight: bold; 
+    margin-bottom: 5px; 
+}
+
+
+input[type="text"],
+textarea,
+input[type="file"] {
+    width: 20%; 
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 5px; 
+    box-sizing: border-box; 
+}
+
+
+.btn-upload {
+    background-color: #007bff; 
+    color: white; 
+    border: none; 
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    font-size: 16px; 
+}
+
+    .btn-upload:hover {
+        background-color: #0056b3; 
+    }
+
+
+textarea {
+    resize: vertical; 
+    height: 100px; 
+}
+
+.link {
+    display: inline-block;
+    text-decoration: none;
+    border: 2px solid #f9004d;
+    font-weight: bold;
+    padding: 8px 10px;
+    border-radius: 30px;
+    color: black;
+}
+
+.container-fluid {
+    padding: 20px;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; 
+}
+
+.photo-item {
+    text-align: center;
+    width: 250px; 
+}
+
+    .photo-item img {
+        width: 100%; 
+        height: 150px; 
+        object-fit: cover; 
+        border-radius: 5px; 
+    }
+
+
+.pagination-container {
+    margin-top: 20px;
+    text-align: center;
+}
+
+    .pagination-container ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .pagination-container li {
+        display: inline;
+        margin-right: 5px;
+    }
+
+        .pagination-container li a {
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border-radius: 3px;
+            text-decoration: none;
+        }
+
+            .pagination-container li a:hover {
+                background-color: #0056b3;
+            }
+
+        .pagination-container li.active a {
+            background-color: #0056b3;
+            pointer-events: none;
+        }
